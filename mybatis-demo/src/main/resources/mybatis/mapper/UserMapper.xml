@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace = "com.example.mybatisdemo.mapper.UserMapper">
+
+    <resultMap id = "result" type = "com.example.mybatisdemo.pojo.User">
+        <result property = "id" column = "id"/>
+        <result property = "username" column = "username"/>
+        <result property = "password" column = "password"/>
+    </resultMap>
+
+    <sql id="column_list" >
+        id, username, password
+    </sql>
+
+    <!--    查询-->
+    <select id = "findOne" resultMap = "result">
+        SELECT <include refid="column_list"></include>
+        FROM t_user WHERE id = #{id}
+    </select>
+
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id">
+        insert into t_user(username, password) values (#{username}, #{password})
+    </insert>
+
+    <update id="update">
+        update t_user set username=#{username}, password=#{password} where id = #{id}
+    </update>
+
+    <delete id="delete">
+        delete from t_user where id = #{id}
+    </delete>
+
+</mapper>
