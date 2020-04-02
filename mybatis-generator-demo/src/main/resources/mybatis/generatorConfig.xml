@@ -52,9 +52,9 @@
             <property name="enableSubPackages" value="false" />
         </javaClientGenerator>
 
-        <!--        <table tableName="user_info" enableCountByExample="true" enableUpdateByExample="true" enableDeleteByExample="true" enableSelectByExample="true" selectByExampleQueryId="true">-->
-        <!--            <generatedKey column="id" sqlStatement="Mysql" identity="true" />-->
-        <!--        </table>-->
+<!--        <table tableName="user_info" enableCountByExample="true" enableUpdateByExample="true" enableDeleteByExample="true" enableSelectByExample="true" selectByExampleQueryId="true">-->
+<!--            <generatedKey column="id" sqlStatement="Mysql" identity="true" />-->
+<!--        </table>-->
         <table tableName="t_user" domainObjectName="User">
             <generatedKey column="id" sqlStatement="Mysql" identity="true" />
         </table>

@@ -1,7 +1,7 @@
 package com.example.mybatisgeneratordemo.controller;
 
 import com.example.mybatisgeneratordemo.domain.User;
-import com.example.mybatisgeneratordemo.service.impl.UserServiceImpl;
+import com.example.mybatisgeneratordemo.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class UserController {
 
     @Autowired
-    private UserServiceImpl userService;
+    private UserService userService;
 
     @GetMapping("/userInfo")
     public User getUserInfo(@RequestParam("user_id") Integer id)
