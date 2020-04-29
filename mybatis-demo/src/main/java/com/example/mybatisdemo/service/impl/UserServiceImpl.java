@@ -22,4 +22,11 @@ public class UserServiceImpl implements UserService {
     public List<User> getList() {
         return userMapper.selectAll();
     }
+
+    @Override
+    public Integer save(User user) {
+        return userMapper.insert(user);
+    }
+
+
 }
