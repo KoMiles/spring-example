@@ -12,5 +12,4 @@ public class MybatisDemoApplication {
         SpringApplication.run(MybatisDemoApplication.class, args);
         System.out.println("=========== Application mybatis-demo  end =========== ");
     }
-
 }
