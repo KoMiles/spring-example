@@ -15,3 +15,4 @@ spring:
     url: jdbc:mysql://127.0.0.1:3306/komo?characterEncoding=utf-8
     username: root
     password: 123456
+    driver-class-name: com.mysql.jdbc.Driver

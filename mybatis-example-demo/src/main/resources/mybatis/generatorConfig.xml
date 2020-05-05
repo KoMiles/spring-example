@@ -33,6 +33,9 @@
             <property name="enableSubPackages" value="false"/>
         </javaClientGenerator>
         <!--定义需要操作的表及对应的DTO名称-->
-        <table tableName="t_user" domainObjectName="User"/>
+<!--        <table tableName="t_user" domainObjectName="User" enableCountByExample="false"-->
+<!--                enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false"-->
+<!--                selectByExampleQueryId="false"/>-->
+        <table tableName="t_user" domainObjectName="User" />
     </context>
 </generatorConfiguration>

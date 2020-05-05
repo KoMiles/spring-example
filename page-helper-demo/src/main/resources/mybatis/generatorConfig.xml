@@ -11,8 +11,9 @@
         </commentGenerator>
         <!--目标数据库配置-->
         <jdbcConnection driverClass="com.mysql.jdbc.Driver"
-                connectionURL="jdbc:mysql://localhost:3306/komo?useUnicode=true&amp;characterEncoding=utf-8&amp;useSSL=false&amp;nullNamePatternMatchesAll=true"
-                userId="root" password="123456"/>
+                connectionURL="jdbc:mysql://127.0.0.1:3306/komo?characterEncoding=utf-8&amp;nullCatalogMeansCurrent=true"
+                userId="root"
+                password="123456">
         <!-- 指定生成的类型为java类型，避免数据库中number等类型字段 -->
         <javaTypeResolver>
             <property name="forceBigDecimals" value="false"/>
