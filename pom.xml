@@ -23,6 +23,7 @@
         <module>mybatis-demo</module>
         <module>page-helper-demo</module>
         <module>mybatis-example-demo</module>
+        <module>apollo-demo</module>
     </modules>
 
     <build>

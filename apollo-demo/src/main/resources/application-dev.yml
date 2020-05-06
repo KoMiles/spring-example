@@ -1,0 +1,10 @@
+#server:
+#  port: 6068
+app:
+  id: komiles
+apollo:
+  meta: https://dev-apollo-eureka-x.mfwdev.com
+  bootstrap:
+    enabled: true
+    namespaces: application
+
