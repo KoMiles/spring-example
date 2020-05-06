@@ -2,8 +2,12 @@ package com.example.apollodemo.controller;
 
 import com.alibaba.fastjson.JSON;
 import com.example.apollodemo.dao.User;
+import com.example.apollodemo.service.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -14,13 +18,12 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/user")
 public class UserController {
 
+    @Autowired
+    UserService userService;
 
-    @GetMapping("/json")
-    public void json()
+    @GetMapping("/one")
+    public User one(@RequestParam("id") Integer id)
     {
-        User user = new User();
-        user.setAge(20).setId(1).setName("张三").setPassword("123456");
-        System.out.print(JSON.toJSONString(user,true));
-//        System.out.print(user);
+        return userService.getOne(id);
     }
 }

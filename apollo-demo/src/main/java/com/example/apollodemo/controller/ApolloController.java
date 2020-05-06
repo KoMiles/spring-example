@@ -16,23 +16,9 @@ public class ApolloController {
     @Value("${name}")
     private String name;
 
-    @Value("${infoflow}")
-    private String infoflowConf;
-
     @GetMapping("/name")
     public String name()
     {
         return name;
     }
-
-    @GetMapping("/infoflow")
-    public String infoflow()
-    {
-        return infoflowConf;
-    }
-
-
-
-
-
 }

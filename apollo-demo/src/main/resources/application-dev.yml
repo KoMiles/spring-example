@@ -3,8 +3,18 @@
 app:
   id: komiles
 apollo:
-  meta: https://dev-apollo-eureka-x.mfwdev.com
+#  meta: https://dev-apollo-eureka-x.mfwdev.com
+  meta: http://106.54.227.205:8080
   bootstrap:
     enabled: true
     namespaces: application
+#
+#spring:
+#  datasource:
+#    url: jdbc:mysql://127.0.0.1:3306/komo?characterEncoding=utf-8
+#    username: root
+#    password: 123456
+#    driver-class-name: com.mysql.cj.jdbc.Driver
 
+mybatis:
+  mapper-locations: classpath:mybatis/mapper/*.xml
