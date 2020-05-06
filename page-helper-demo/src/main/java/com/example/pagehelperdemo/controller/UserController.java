@@ -26,7 +26,8 @@ public class UserController {
     }
 
     @GetMapping("/list")
-    public PageDTO<User> getList(@RequestParam("page") Integer page, @RequestParam("limit") Integer limit){
+    public PageDTO<User> getList(@RequestParam(value = "page",defaultValue = "1") Integer page,
+            @RequestParam(value = "limit",defaultValue = "10") Integer limit){
         return userService.getList(page,limit);
     }
 

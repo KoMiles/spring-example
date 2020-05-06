@@ -2,7 +2,6 @@ package com.example.pagehelperdemo.service;
 
 import com.example.pagehelperdemo.common.PageDTO;
 import com.example.pagehelperdemo.dao.User;
-import java.util.List;
 
 /**
  * @author komiles@163.com
