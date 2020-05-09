@@ -24,6 +24,7 @@
         <module>page-helper-demo</module>
         <module>mybatis-example-demo</module>
         <module>apollo-demo</module>
+        <module>two-db-demo</module>
     </modules>
 
     <build>

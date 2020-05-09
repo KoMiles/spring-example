@@ -1,0 +1,16 @@
+spring:
+  datasource:
+    db1:
+      jdbc-url: jdbc:mysql://127.0.0.1:3306/komo?characterEncoding=utf-8
+      username: root
+      password: 123456
+      driver-class-name: com.mysql.jdbc.Driver
+    db2:
+      jdbc-url: jdbc:mysql://127.0.0.1:3306/mfw?characterEncoding=utf-8
+      username: root
+      password: 123456
+      driver-class-name: com.mysql.jdbc.Driver
+
+
+server:
+  port: 7777
