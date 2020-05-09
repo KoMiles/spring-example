@@ -29,7 +29,7 @@ public class Db2Config {
     public SqlSessionFactory sqlSessionFactoryDb2() throws Exception {
         SqlSessionFactoryBean factoryBean = new SqlSessionFactoryBean();
         factoryBean.setDataSource(dataSourceDb2);
-        factoryBean.setMapperLocations(new PathMatchingResourcePatternResolver().getResources(PATH));
+        factoryBean.setMapperLocations(new PathMatchingResourcePatternResolver().getResources(Db2Config.PATH));
         return factoryBean.getObject();
     }
 

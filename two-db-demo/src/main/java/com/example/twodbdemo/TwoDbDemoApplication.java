@@ -12,5 +12,4 @@ public class TwoDbDemoApplication {
         SpringApplication.run(TwoDbDemoApplication.class, args);
         System.out.println("========= Two Db Demo Application End ============");
     }
-
 }

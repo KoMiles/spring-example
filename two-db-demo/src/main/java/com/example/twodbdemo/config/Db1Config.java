@@ -30,7 +30,7 @@ public class Db1Config {
     public SqlSessionFactory sqlSessionFactoryDb1() throws Exception {
         SqlSessionFactoryBean factoryBean = new SqlSessionFactoryBean();
         factoryBean.setDataSource(dataSourceDb1);
-        factoryBean.setMapperLocations(new PathMatchingResourcePatternResolver().getResources(PATH));
+        factoryBean.setMapperLocations(new PathMatchingResourcePatternResolver().getResources(Db1Config.PATH));
         return factoryBean.getObject();
     }
 

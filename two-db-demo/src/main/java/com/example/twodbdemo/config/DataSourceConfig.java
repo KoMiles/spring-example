@@ -12,12 +12,15 @@ import org.springframework.context.annotation.Configuration;
  */
 @Configuration
 public class DataSourceConfig {
+
     @Bean(name="db1")
     @ConfigurationProperties(prefix = "spring.datasource.db1")
     public DataSource komoDbDataSource()
     {
         return DataSourceBuilder.create().build();
     }
+
+
     @Bean(name="db2")
     @ConfigurationProperties(prefix = "spring.datasource.db2")
     public DataSource mfwDbDataSource()
