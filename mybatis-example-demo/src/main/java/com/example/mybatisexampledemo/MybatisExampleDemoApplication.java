@@ -8,6 +8,7 @@ public class MybatisExampleDemoApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(MybatisExampleDemoApplication.class, args);
+        System.out.println("======= application end ======");
     }
 
 }
