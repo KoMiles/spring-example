@@ -25,6 +25,7 @@
         <module>mybatis-example-demo</module>
         <module>apollo-demo</module>
         <module>two-db-demo</module>
+        <module>druid-demo</module>
     </modules>
 
     <build>
