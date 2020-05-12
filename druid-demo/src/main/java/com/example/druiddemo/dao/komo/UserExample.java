@@ -1,4 +1,4 @@
-package com.example.druiddemo.dao;
+package com.example.druiddemo.dao.komo;
 
 import java.util.ArrayList;
 import java.util.List;

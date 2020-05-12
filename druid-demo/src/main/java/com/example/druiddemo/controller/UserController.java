@@ -2,7 +2,9 @@ package com.example.druiddemo.controller;
 
 
 import com.example.druiddemo.common.PageDTO;
-import com.example.druiddemo.dao.User;
+import com.example.druiddemo.dao.komo.User;
+import com.example.druiddemo.dao.mfw.BaseUser;
+import com.example.druiddemo.service.BaseUserService;
 import com.example.druiddemo.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -21,6 +23,9 @@ public class UserController {
     @Autowired
     private UserService userService;
 
+    @Autowired
+    private BaseUserService baseUserService;
+
     @GetMapping("/one")
     public User getOne(@RequestParam("id") Integer id){
         return userService.getOne(id);
@@ -31,5 +36,11 @@ public class UserController {
             @RequestParam(value = "limit",defaultValue = "10") Integer limit){
         return userService.getList(page,limit);
     }
+
+    @GetMapping("/base")
+    public BaseUser getBase(@RequestParam("id") Integer id){
+        return baseUserService.getOne(id);
+    }
+
 
 }

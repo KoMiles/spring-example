@@ -15,7 +15,7 @@ import org.springframework.context.annotation.Configuration;
  * @author komiles@163.com
  * @date 2020-05-11 16:12
  */
-@Configuration
+//@Configuration
 public class DruidConfig {
 
     @Bean

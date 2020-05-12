@@ -1,7 +1,7 @@
 package com.example.druiddemo.service;
 
 import com.example.druiddemo.common.PageDTO;
-import com.example.druiddemo.dao.User;
+import com.example.druiddemo.dao.komo.User;
 
 /**
  * @author komiles@163.com

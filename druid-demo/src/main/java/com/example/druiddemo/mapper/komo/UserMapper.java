@@ -1,7 +1,7 @@
-package com.example.druiddemo.mapper;
+package com.example.druiddemo.mapper.komo;
 
-import com.example.druiddemo.dao.User;
-import com.example.druiddemo.dao.UserExample;
+import com.example.druiddemo.dao.komo.User;
+import com.example.druiddemo.dao.komo.UserExample;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
 

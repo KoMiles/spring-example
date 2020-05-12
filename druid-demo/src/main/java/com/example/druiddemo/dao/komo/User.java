@@ -1,4 +1,4 @@
-package com.example.druiddemo.dao;
+package com.example.druiddemo.dao.komo;
 
 public class User {
     private Integer id;

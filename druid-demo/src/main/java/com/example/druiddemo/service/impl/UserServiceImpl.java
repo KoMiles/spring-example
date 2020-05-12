@@ -2,9 +2,9 @@ package com.example.druiddemo.service.impl;
 
 
 import com.example.druiddemo.common.PageDTO;
-import com.example.druiddemo.dao.User;
-import com.example.druiddemo.dao.UserExample;
-import com.example.druiddemo.mapper.UserMapper;
+import com.example.druiddemo.dao.komo.User;
+import com.example.druiddemo.dao.komo.UserExample;
+import com.example.druiddemo.mapper.komo.UserMapper;
 import com.example.druiddemo.service.UserService;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
