@@ -1,4 +1,4 @@
-package com.example.streamdemo.demo1;
+package com.example.streamdemo.demo;
 
 import com.alibaba.fastjson.JSONObject;
 import java.util.Arrays;
@@ -12,7 +12,7 @@ import org.springframework.boot.test.context.SpringBootTest;
  * @date 2020-05-17 23:05
  */
 @SpringBootTest
-public class StringTest {
+public class StringTest0517 {
 
     @Test
     public void hello(){
