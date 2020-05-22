@@ -8,6 +8,7 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -60,5 +61,13 @@ public class Test2Controller {
     }
 
 
-    @GetMapping(path = "/{}/{}")
+    @GetMapping(path = "/{name}/{age}")
+    public String getNameAndAge(@PathVariable("name") String name, @PathVariable("age") Integer age){
+        return "姓名为："+name+"年龄为："+age;
+    }
+
+    @RequestMapping(path = "/test/{name}/{age}",method = RequestMethod.GET)
+    public String getNameAndAge2(@PathVariable("name") String name, @PathVariable("age") Integer age){
+        return "姓名为2："+name+"年龄为2："+age;
+    }
 }
