@@ -17,6 +17,4 @@ public class Person implements Serializable {
     private String id;
 
     private String name;
-
-
 }
