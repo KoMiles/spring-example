@@ -1,0 +1,51 @@
+package com.example.redisdemo.controller;
+
+import com.example.redisdemo.dao.Person;
+import com.example.redisdemo.util.RedisUtil;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.repository.query.Param;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+/**
+ * @author komiles@163.com
+ * @date 2020-05-22 15:13
+ */
+
+@RestController
+@RequestMapping("/test2")
+public class Test2Controller {
+
+    static final String USER_LIST_HASH_KEY = "student_list_0522_02";
+
+    @Autowired
+    RedisUtil redisUtil;
+
+
+    @GetMapping("/set")
+    public String setStr(@Param("key") String key, @Param("value") String value){
+        redisUtil.set(key,value);
+        return key;
+    }
+
+    @GetMapping("/get")
+    public String setStr(@Param("key") String key){
+        return redisUtil.get(key).toString();
+    }
+
+    @GetMapping("/hashSet")
+    public String setHash(){
+        Person person = new Person();
+        person.setId("1").setName("张三");
+        redisUtil.hset(USER_LIST_HASH_KEY,person.getId(),person);
+        return "OK";
+    }
+
+    @GetMapping("/hashGet")
+    public Object getHash(){
+        Person person = new Person();
+        person.setId("1").setName("张三");
+        return redisUtil.hget(USER_LIST_HASH_KEY,"1");
+    }
+}
