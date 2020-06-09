@@ -27,6 +27,7 @@
         <module>two-db-demo</module>
         <module>druid-demo</module>
         <module>stream-demo</module>
+        <module>rocketmq-demo</module>
     </modules>
 
     <build>
