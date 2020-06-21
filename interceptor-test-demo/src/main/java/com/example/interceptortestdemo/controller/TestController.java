@@ -20,4 +20,15 @@ public class TestController {
         log.info("this is {}",TestController.class);
         return "Hello";
     }
+
+
+    @GetMapping("/index")
+    public void index(){
+        int a = 123;
+        String b = String.valueOf(a);
+        log.info("b为：{},b的类型为：{}",b,b.getClass());
+        Integer c = 456;
+        String d = c.toString();
+        log.info("d为：{},d的类型为：{}",d,d.getClass());
+    }
 }
