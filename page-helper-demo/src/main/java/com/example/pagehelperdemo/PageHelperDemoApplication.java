@@ -5,7 +5,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-@MapperScan("com.example.pagehelperdemo.mapper")
+@MapperScan("com.example.pagehelperdemo.mappertest")
 public class PageHelperDemoApplication {
 
 	public static void main(String[] args) {

@@ -11,4 +11,4 @@ spring:
 mybatis:
   # 对应实体类的包名
   type-aliases-package: com.komiles.study.domain
-  mapper-locations: classpath:mybatis/mapper/*.xml
+  mapper-locations: classpath:mybatis/mappertest/*.xml

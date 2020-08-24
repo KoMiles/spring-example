@@ -1,14 +1,13 @@
 server:
-  port: 6051
+  port: 6066
   servlet:
     context-path: /springboot
 
-mybatis:
-  # 对应实体类的包名
-  type-aliases-package: com.komiles.study.domain
-  mapper-locations: classpath:mybatis/mappertest/*.xml
-#  config-location: classpath:mybatis/mybatis-config.xml
-
+#mybatis:
+#  # 对应实体类的包名
+#  type-aliases-package: com.komiles.study.domain
+#  mappertest-locations: classpath:mybatis/mappertest/*.xml
+##  config-location: classpath:mybatis/mybatis-config.xml
 
 spring:
   datasource:

@@ -16,10 +16,10 @@ import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
  * @date 2020-05-09 14:21
  */
 @Configuration
-@MapperScan(basePackages = {"com.example.twodbdemo.mapper.mfwMapper"}, sqlSessionFactoryRef = "sqlSessionFactoryDb2")
+@MapperScan(basePackages = {"com.example.twodbdemo.mappertest.mfwMapper"}, sqlSessionFactoryRef = "sqlSessionFactoryDb2")
 public class Db2Config {
 
-    private static final String PATH = "classpath:mybatis/mfw/mapper/*.xml";
+    private static final String PATH = "classpath:mybatis/mfw/mappertest/*.xml";
 
     @Autowired
     @Qualifier("db2")

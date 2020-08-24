@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 @EnableApolloConfig
-@MapperScan("com.example.apollodemo.mapper")
+@MapperScan("com.example.apollodemo.mappertest")
 public class ApolloDemoApplication {
 
     public static void main(String[] args) {

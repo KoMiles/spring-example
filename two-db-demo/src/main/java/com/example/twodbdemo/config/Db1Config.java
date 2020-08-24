@@ -17,10 +17,10 @@ import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
  */
 
 @Configuration
-@MapperScan(basePackages = {"com.example.twodbdemo.mapper.komoMapper"}, sqlSessionFactoryRef = "sqlSessionFactoryDb1")
+@MapperScan(basePackages = {"com.example.twodbdemo.mappertest.komoMapper"}, sqlSessionFactoryRef = "sqlSessionFactoryDb1")
 public class Db1Config {
 
-    private static final String PATH = "classpath:mybatis/komo/mapper/*.xml";
+    private static final String PATH = "classpath:mybatis/komo/mappertest/*.xml";
 
     @Autowired
     @Qualifier("db1")

@@ -28,8 +28,8 @@ public class KomoDataSourceConfig {
     /**
      * 配置多数据源 关键就在这里 这里配置了不同的数据源扫描不同mapper
      */
-    static final String PACKAGE = "com.example.druiddemo.mapper.komo";
-    static final String MAPPER_LOCATION = "classpath:mybatis/komo/mapper/*.xml";
+    static final String PACKAGE = "com.example.druiddemo.mappertest.komo";
+    static final String MAPPER_LOCATION = "classpath:mybatis/komo/mappertest/*.xml";
 
     /**
      * 连接数据库信息 这个其实更好的是用配置中心完成

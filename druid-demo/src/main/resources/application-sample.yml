@@ -43,5 +43,5 @@ server:
 mybatis:
   # 对应实体类的包名
   type-aliases-package: com.example.druiddemo.dao
-  mapper-locations: classpath:mybatis/mapper/*.xml
+  mapper-locations: classpath:mybatis/mappertest/*.xml
 #  config-location: classpath:mybatis/mybatis-config.xml
