@@ -29,6 +29,7 @@
         <module>stream-demo</module>
         <module>rocketmq-demo</module>
         <module>interceptor-test-demo</module>
+        <module>mybatis-plus-demo</module>
     </modules>
 
     <build>
