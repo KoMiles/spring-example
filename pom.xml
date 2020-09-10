@@ -30,6 +30,7 @@
         <module>rocketmq-demo</module>
         <module>interceptor-test-demo</module>
         <module>mybatis-plus-demo</module>
+        <module>feign-demo</module>
     </modules>
 
     <build>
