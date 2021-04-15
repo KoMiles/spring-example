@@ -31,6 +31,8 @@
         <module>interceptor-test-demo</module>
         <module>mybatis-plus-demo</module>
         <module>feign-demo</module>
+        <module>monitor-demo</module>
+        <module>elasticsearch-demo</module>
     </modules>
 
     <build>
