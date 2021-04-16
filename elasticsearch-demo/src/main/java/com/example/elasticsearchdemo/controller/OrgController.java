@@ -19,10 +19,10 @@ public class OrgController {
     @Autowired
     EsService esService;
 
-    @GetMapping("/list")
-    public List<OrgDao> getOrgList(@RequestParam String userId)
-    {
-        List<OrgDao> orgDaoList = esService.queryAll(userId);
-        return orgDaoList;
-    }
+//    @GetMapping("/list")
+//    public List<OrgDao> getOrgList(@RequestParam String userId)
+//    {
+//        List<OrgDao> orgDaoList = esService.queryAll(userId);
+//        return orgDaoList;
+//    }
 }
