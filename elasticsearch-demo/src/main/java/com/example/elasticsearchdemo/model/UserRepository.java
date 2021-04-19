@@ -10,5 +10,6 @@ import org.springframework.data.elasticsearch.repository.ElasticsearchRepository
 public interface UserRepository extends ElasticsearchRepository<UserModel, String> {
 //    List<UserModel> findByNameLike(String title);
     UserModel queryById(Integer id);
+    List<UserModel> findByNameLike(String name);
 }
 

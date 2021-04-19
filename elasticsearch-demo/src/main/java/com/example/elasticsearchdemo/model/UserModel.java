@@ -11,8 +11,8 @@ import org.springframework.data.elasticsearch.annotations.Document;
  */
 @Data
 @Accessors(chain = true)
-@Document(indexName = "student",type = "first")
-
+//@Document(indexName = "student",type = "first")
+@Document(indexName = "student")
 public class UserModel implements Serializable {
 
     private String age;
@@ -24,6 +24,9 @@ public class UserModel implements Serializable {
     private String ctime;
 
     private String utime;
+
+
+    private String content;
 
     private Integer id;
 }

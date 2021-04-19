@@ -48,6 +48,15 @@ public class UserController {
     {
         Optional<UserModel> userModel = userRepository.findById(id);
         UserModel userModelOne = userModel.get();
+//        String resultString = "";
+//        ElasticSearchUtils utils = new ElasticSearchUtils();
+//        try{
+//            resultString = utils.getByIndexAndId("student",id);
+//            log.info("========= result:{}============",resultString);
+//        }catch (Exception e){
+//            log.info("error message:{}",e.getMessage());
+//        }
+
         return userModelOne;
     }
 
@@ -73,39 +82,25 @@ public class UserController {
     public UserModel getUserList(@RequestParam String keyword)
     {
         System.out.println(keyword);
-//        BoolQueryBuilder boolQueryBuilder = QueryBuilders.boolQuery();
-//        if(!Objects.isNull(adminSearchRoomParam.getRoomId())) {
-//            boolQueryBuilder.must(QueryBuilders.termQuery("roomId", adminSearchRoomParam.getRoomId()));
-//        }
-//        if(!Objects.isNull(adminSearchRoomParam.getRoomTitle())) {
-//            boolQueryBuilder.must(QueryBuilders.wildcardQuery("name.keyword", "*"+adminSearchRoomParam.getRoomTitle()+"*"));
-//        }
-//        if(!Objects.isNull(adminSearchRoomParam.getAnchorName())) {
-//            boolQueryBuilder.must(QueryBuilders.wildcardQuery("anchorName.keyword", "*"+adminSearchRoomParam.getAnchorName()+"*"));
-//        }
-//        if(!Objects.isNull(adminSearchRoomParam.getType())) {
-//            boolQueryBuilder.must(QueryBuilders.termQuery("status", adminSearchRoomParam.getType()));
-//        }
-//        boolQueryBuilder.
-
-//        boolQueryBuilder.must(QueryBuilders.wildcardQuery("title", "*"+keyword+"*"));
-//        boolQueryBuilder.must(QueryBuilders.matchPhraseQuery("title", "*"+keyword+"*"));
-//        boolQueryBuilder.must(QueryBuilders.matchPhraseQuery("title", keyword));
-//        boolQueryBuilder.must(QueryBuilders.wildcardQuery("title", "*"+keyword+"*"));
-
-//        Pageable pageable = PageRequest.of(0, 10);
-//        String keyword[] = ke
-//        Page<UserModel> userModelPage = userRepository.searchSimilar("name",[keyword], pageable);
         UserModel userModel = userRepository.queryById(1);
         return userModel;
+    }
+
+    @GetMapping("/list2")
+    public List<UserModel> getUserList2(@RequestParam String keyword)
+    {
+        System.out.println(keyword);
+        List<UserModel> userModelList = userRepository.findByNameLike(keyword);
+        return userModelList;
     }
 
     @GetMapping("/search")
     public PageDTO<UserModel> getSearchList(@RequestParam String keyword)
     {
         BoolQueryBuilder boolQueryBuilder = QueryBuilders.boolQuery();
-//        boolQueryBuilder.must(QueryBuilders.matchPhraseQuery("title", "*"+keyword+"*"));
-        boolQueryBuilder.must(QueryBuilders.termQuery("name", keyword));
+//        boolQueryBuilder.must(QueryBuilders.matchPhraseQuery("name", "*"+keyword+"*"));
+        boolQueryBuilder.must(QueryBuilders.wildcardQuery("name", "*"+keyword+"*"));
+//        boolQueryBuilder.must(QueryBuilders.termQuery("name", keyword));
         PageDTO<UserModel> userModelPageDTO = userService.search(boolQueryBuilder, PageRequest.of(0, 10));
         return userModelPageDTO;
     }
