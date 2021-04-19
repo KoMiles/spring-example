@@ -69,11 +69,11 @@ public class UserController {
         return "OK";
     }
 
-
     @GetMapping("/list")
-    public List<UserModel>  getUserList(@RequestParam String keyword)
+    public UserModel getUserList(@RequestParam String keyword)
     {
-        BoolQueryBuilder boolQueryBuilder = QueryBuilders.boolQuery();
+        System.out.println(keyword);
+//        BoolQueryBuilder boolQueryBuilder = QueryBuilders.boolQuery();
 //        if(!Objects.isNull(adminSearchRoomParam.getRoomId())) {
 //            boolQueryBuilder.must(QueryBuilders.termQuery("roomId", adminSearchRoomParam.getRoomId()));
 //        }
@@ -96,8 +96,8 @@ public class UserController {
 //        Pageable pageable = PageRequest.of(0, 10);
 //        String keyword[] = ke
 //        Page<UserModel> userModelPage = userRepository.searchSimilar("name",[keyword], pageable);
-        List<UserModel> userModelList = userRepository.findByNameLike(keyword);
-        return userModelList;
+        UserModel userModel = userRepository.queryById(1);
+        return userModel;
     }
 
     @GetMapping("/search")
