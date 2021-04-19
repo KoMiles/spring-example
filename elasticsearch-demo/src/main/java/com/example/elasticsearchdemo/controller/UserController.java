@@ -11,6 +11,7 @@ import org.elasticsearch.index.query.BoolQueryBuilder;
 import org.elasticsearch.index.query.QueryBuilders;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
+import org.springframework.data.elasticsearch.core.ElasticsearchRestTemplate;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -48,15 +49,6 @@ public class UserController {
     {
         Optional<UserModel> userModel = userRepository.findById(id);
         UserModel userModelOne = userModel.get();
-//        String resultString = "";
-//        ElasticSearchUtils utils = new ElasticSearchUtils();
-//        try{
-//            resultString = utils.getByIndexAndId("student",id);
-//            log.info("========= result:{}============",resultString);
-//        }catch (Exception e){
-//            log.info("error message:{}",e.getMessage());
-//        }
-
         return userModelOne;
     }
 
@@ -103,6 +95,8 @@ public class UserController {
 //        boolQueryBuilder.must(QueryBuilders.termQuery("name", keyword));
         PageDTO<UserModel> userModelPageDTO = userService.search(boolQueryBuilder, PageRequest.of(0, 10));
         return userModelPageDTO;
-    }
 
+
+
+    }
 }
