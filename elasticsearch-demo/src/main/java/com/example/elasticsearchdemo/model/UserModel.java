@@ -14,7 +14,7 @@ import org.springframework.data.elasticsearch.annotations.Document;
  */
 @Data
 @Builder
-//@Accessors(chain = true)
+@Accessors(chain = true)
 //@Document(indexName = "student",type = "first")
 @Document(indexName = "student")
 @AllArgsConstructor
