@@ -1,9 +1,11 @@
 package com.example.elasticsearchdemo.controller;
 
+import com.example.elasticsearchdemo.model.UserTest2Model;
 import com.example.elasticsearchdemo.model.UserTestModel;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.elasticsearch.core.ElasticsearchRestTemplate;
+import org.springframework.data.elasticsearch.core.mapping.IndexCoordinates;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -21,10 +23,21 @@ public class IndexController {
     @GetMapping("/createIndex")
     public String createIndex()
     {
-        elasticsearchRestTemplate.createIndex(UserTestModel.class);
-
-        elasticsearchRestTemplate.putMapping(UserTestModel.class);
+        elasticsearchRestTemplate.indexOps(UserTestModel.class);
+//        elasticsearchRestTemplate.createIndex(UserTestModel.class);
+//        elasticsearchRestTemplate.putMapping(UserTestModel.class);
 
         return "OK";
     }
+    @GetMapping("/updateIndex")
+    public String updateIndex()
+    {
+        elasticsearchRestTemplate.indexOps(UserTest2Model.class);
+//        elasticsearchRestTemplate.createIndex(UserTestModel.class);
+//
+//        elasticsearchRestTemplate.putMapping(UserTestModel.class);
+
+        return "OK";
+    }
+
 }

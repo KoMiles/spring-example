@@ -9,4 +9,6 @@ import com.example.elasticsearchdemo.model.UserTestModel;
 public interface UserTestUpdate {
 
     public void updateContent(UserTestModel userTestModel, String content);
+
+    public void updateData(UserTestModel userTestModel);
 }

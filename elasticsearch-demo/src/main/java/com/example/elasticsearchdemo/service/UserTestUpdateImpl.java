@@ -28,4 +28,13 @@ public class UserTestUpdateImpl implements UserTestUpdate {
         UpdateResponse response = elasticsearchRestTemplate.update(updateQuery, IndexCoordinates.of("student_test_0"));
         System.out.println(response.getResult().toString());
     }
+
+    @Override
+    public void updateData(UserTestModel userTestModel) {
+        Document document = Document.create();
+        document.put("content", userTestModel.getContent());
+        document.put("title", userTestModel.getTitle());
+        UpdateQuery updateQuery = UpdateQuery.builder(userTestModel.getId().toString()).withDocument(document).build();
+        elasticsearchRestTemplate.update(updateQuery, IndexCoordinates.of("student_test_0"));
+    }
 }

@@ -11,6 +11,7 @@ import org.springframework.data.elasticsearch.annotations.Field;
 import org.springframework.data.elasticsearch.annotations.FieldType;
 
 /**
+ * 更新之后的索引
  * @author komiles@163.com
  * @date 2021-04-28 17:43
  */
@@ -20,7 +21,7 @@ import org.springframework.data.elasticsearch.annotations.FieldType;
 @Document(indexName = "student_test_1")
 @AllArgsConstructor
 @NoArgsConstructor
-public class UserTestModel implements Serializable {
+public class UserTest2Model implements Serializable {
 
     @Field(type = FieldType.Integer)
     private String age;
@@ -39,6 +40,9 @@ public class UserTestModel implements Serializable {
 
     @Field(type = FieldType.Text)
     private String content;
+
+    @Field(type = FieldType.Keyword)
+    private String tag;
 
     @Id
     private Long id;
