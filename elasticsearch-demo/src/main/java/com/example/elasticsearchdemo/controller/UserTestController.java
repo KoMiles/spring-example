@@ -1,6 +1,5 @@
 package com.example.elasticsearchdemo.controller;
 
-import com.example.elasticsearchdemo.model.UserModel;
 import com.example.elasticsearchdemo.model.UserTest2Model;
 import com.example.elasticsearchdemo.model.UserTestModel;
 import com.example.elasticsearchdemo.model.UserTestRepository;
