@@ -31,7 +31,6 @@ public class UserModel implements Serializable {
 
     private String utime;
 
-
     private String content;
 
     private Integer id;

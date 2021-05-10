@@ -1,5 +1,6 @@
 package com.example.elasticsearchdemo.controller;
 
+
 import com.example.elasticsearchdemo.model.UserTest2Model;
 import com.example.elasticsearchdemo.model.UserTestModel;
 import lombok.extern.slf4j.Slf4j;
