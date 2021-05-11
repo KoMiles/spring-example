@@ -20,7 +20,7 @@ import org.springframework.data.elasticsearch.annotations.FieldType;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-@Document(indexName = "content-data-0510")
+@Document(indexName = "content-data-0510-kongming-02")
 public class ContentDataModel implements Serializable {
     @Field(name = "id")
     private String id;
@@ -47,9 +47,6 @@ public class ContentDataModel implements Serializable {
     @Field(name = "kol_level",type = FieldType.Integer)
     @JsonProperty("kol_level")
     private Integer kolLevel;
-
-    @Field(type = FieldType.Integer)
-    private Integer distribute;
 
     @Field(name = "tag_op",type = FieldType.Keyword)
     @JsonProperty("tag_op")
@@ -143,7 +140,7 @@ public class ContentDataModel implements Serializable {
     @JsonProperty("play_cnt")
     private String playCnt;
 
-    @Field(name = "channel_type",type = FieldType.Long)
+    @Field(name = "channel_type",type = FieldType.Integer)
     @JsonProperty("channel_type")
     private String channelType;
 
@@ -163,7 +160,7 @@ public class ContentDataModel implements Serializable {
     @JsonProperty("click_1d_pv")
     private String click1dPv;
 
-    @Field(name = "ctr_1d",type = FieldType.Long)
+    @Field(name = "ctr_1d",type = FieldType.Float)
     @JsonProperty("ctr_1d")
     private String ctr1d;
 
@@ -183,7 +180,7 @@ public class ContentDataModel implements Serializable {
     @JsonProperty("click_7d_pv")
     private String click7dPv;
 
-    @Field(name = "ctr_7d",type = FieldType.Long)
+    @Field(name = "ctr_7d",type = FieldType.Float)
     @JsonProperty("ctr_7d")
     private String ctr7d;
 
@@ -203,7 +200,7 @@ public class ContentDataModel implements Serializable {
     @JsonProperty("click_15d_pv")
     private String click15dPv;
 
-    @Field(name = "ctr_15d",type = FieldType.Long)
+    @Field(name = "ctr_15d",type = FieldType.Float)
     @JsonProperty("ctr_15d")
     private String ctr15d;
 
@@ -223,7 +220,7 @@ public class ContentDataModel implements Serializable {
     @JsonProperty("click_30d_pv")
     private String click30dPv;
 
-    @Field(name = "ctr_30d",type = FieldType.Long)
+    @Field(name = "ctr_30d",type = FieldType.Float)
     @JsonProperty("ctr_30d")
     private String ctr30d;
 }
