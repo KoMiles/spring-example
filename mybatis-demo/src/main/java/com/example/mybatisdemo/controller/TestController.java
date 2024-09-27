@@ -2,11 +2,12 @@ package com.example.mybatisdemo.controller;
 
 import com.example.mybatisdemo.domain.User;
 import com.example.mybatisdemo.service.UserService;
-import java.util.Random;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.Random;
 
 /**
  * @author komiles@163.com
@@ -30,7 +31,7 @@ public class TestController {
         for(int i=0;i<size;i++){
             Random r = new Random();
             Integer randNum = Math.abs(r.nextInt()%100);
-            log.info("记录id：{},随机数：{}",i,randNum);
+//            log.info("记录id：{},随机数：{}",i,randNum);
 
             User user = new User();
             user.setPassword("000"+i+randNum);
