@@ -56,7 +56,8 @@
             <property name="enableSubPackages" value="false" />
         </javaClientGenerator>
 
-        <table tableName="t_user" domainObjectName="User">
+        <table tableName="t_student" domainObjectName="UserStudent">
+            <!-- 生成主键的方法 -->
 <!--            <generatedKey column="id" sqlStatement="Mysql" identity="true" />-->
         </table>
 
