@@ -9,11 +9,17 @@ import org.springframework.web.bind.annotation.RestController;
 //@RequestMapping("/hello")
 public class HelloController {
 
-    @GetMapping("/hello/say")
-//    @RequestMapping(value = "123",path = "/hello/say",method = RequestMethod.GET)
+//    @GetMapping("/hello/say")
+    @RequestMapping(path = "/hello/say",method = RequestMethod.GET)
     public String Say()
     {
-        String res = "this is return data";
-        return res;
+        return "this is say data";
+    }
+
+
+    @RequestMapping(path = "/hello/hi",method = RequestMethod.GET)
+    public String hi()
+    {
+        return "this is hi data";
     }
 }
