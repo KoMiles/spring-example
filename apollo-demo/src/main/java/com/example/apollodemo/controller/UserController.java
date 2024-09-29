@@ -1,10 +1,8 @@
 package com.example.apollodemo.controller;
 
-import com.alibaba.fastjson.JSON;
 import com.example.apollodemo.dao.User;
 import com.example.apollodemo.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
